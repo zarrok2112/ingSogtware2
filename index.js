@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 
 app.post('/test/post', (req, res) => {
     console.log(req.body);
+    sendNotification(req.body)
     res.send('TESTEO POST ' + req.body.nombre);
 });
 
